@@ -12,7 +12,7 @@
 
 <main>
   <div>
-    <img src="./assets/Logo-V2.png">
+    <img id="logo" src='assets/Logo-V2.png' alt="XD">
   </div>
   <div class="baseMenuSide">
     <p>
@@ -85,6 +85,10 @@
         text-transform: uppercase;
         font-size: 4em;
         font-weight: 100;
+    }
+
+    #logo {
+        max-width: 13rem;
     }
 
 

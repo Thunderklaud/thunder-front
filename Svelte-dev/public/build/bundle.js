@@ -1281,21 +1281,24 @@ var app = (function () {
     			div3 = element("div");
     			p2 = element("p");
     			create_component(thumbnail.$$.fragment);
-    			if (!src_url_equal(img.src, img_src_value = "./assets/Logo-V2.png")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "id", "logo");
+    			if (!src_url_equal(img.src, img_src_value = "assets/Logo-V2.png")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "XD");
+    			attr_dev(img, "class", "svelte-wzl3a");
     			add_location(img, file, 14, 4, 361);
     			add_location(div0, file, 13, 2, 351);
-    			add_location(p0, file, 17, 4, 436);
-    			attr_dev(div1, "class", "baseMenuSide svelte-a01n3a");
-    			add_location(div1, file, 16, 2, 405);
-    			add_location(p1, file, 24, 4, 618);
+    			add_location(p0, file, 17, 4, 453);
+    			attr_dev(div1, "class", "baseMenuSide svelte-wzl3a");
+    			add_location(div1, file, 16, 2, 422);
+    			add_location(p1, file, 24, 4, 635);
     			attr_dev(div2, "id", "dataToShow");
-    			attr_dev(div2, "class", "dataPane svelte-a01n3a");
-    			add_location(div2, file, 23, 2, 575);
-    			attr_dev(p2, "class", "thumbnail svelte-a01n3a");
-    			add_location(p2, file, 29, 4, 687);
-    			attr_dev(div3, "class", "metaInfo svelte-a01n3a");
-    			add_location(div3, file, 28, 2, 660);
-    			attr_dev(main, "class", "svelte-a01n3a");
+    			attr_dev(div2, "class", "dataPane svelte-wzl3a");
+    			add_location(div2, file, 23, 2, 592);
+    			attr_dev(p2, "class", "thumbnail svelte-wzl3a");
+    			add_location(p2, file, 29, 4, 704);
+    			attr_dev(div3, "class", "metaInfo svelte-wzl3a");
+    			add_location(div3, file, 28, 2, 677);
+    			attr_dev(main, "class", "svelte-wzl3a");
     			add_location(main, file, 12, 0, 342);
     		},
     		l: function claim(nodes) {
