@@ -5,7 +5,7 @@
 
 </script>
 
-<main class="navMain">
+<main>
   <MenuTopic entry="{entry}"/>
 </main>
 

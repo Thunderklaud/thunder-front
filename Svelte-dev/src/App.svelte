@@ -1,36 +1,23 @@
 <script>
-    import DataPane from "./components/DataPane.svelte";
+    import UsualApp from "./components/UsualApp.svelte";
 
-    export let name;
-
-    import MenuTopic from "./components/MenuTopic.svelte";
-    import ShowData from "./components/showData.svelte"
-    import Thumbnail from "./components/Thumbnail.svelte";
-    import DataComponent from "./components/DataComponent.svelte";
+    // export let name;
 
 </script>
 
 <main>
-  <div>
-    <img id="logo" src='assets/Logo-V2.png' alt="XD">
+  <header>
+    <div>
+      <img id="logo" src='assets/Logo-V2.png' alt="XD">
+    </div>
+  </header>
+  <div class="content">
+      <UsualApp/>
   </div>
-  <div class="baseMenuSide">
-    <p>
-      <MenuTopic entry="Dateien"/>
-      <ShowData entry="Meine Bibliothek"/>
-      <MenuTopic entry="Werkzeuge"/>
-    </p>
-  </div>
-  <div id="dataToShow" class="dataPane">
-    <p>
-      <DataPane/>
-    </p>
-  </div>
-  <div class="metaInfo">
-    <p class="thumbnail">
-      <Thumbnail entry="Thumbnail"/>
-    </p>
-  </div>
+  <footer>
+    <p>put stuff as Components here</p>
+  </footer>
+
 </main>
 
 <style>
@@ -39,43 +26,42 @@
     }
 
     main {
+        display: grid;
         background-color: #555;
         color: #999999;
+    }
+
+    header {
+        grid-row: 1;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 5rem;
+        background-color: red;
+        color: white;
         text-align: center;
-        padding: 1em;
-        max-width: 240px;
-        margin: 0 auto;
-        display: block;
+    }
+    .content {
+        grid-row: 2;
+        height: 51rem;
+        margin-top: 5rem;
+        margin-bottom: 4rem;
     }
 
-    .baseMenuSide {
-        display: flex;
-        float: left;
+    footer {
+        grid-row: 3;
+        position: sticky;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3rem;
+        background-color: red;
+        color: white;
+        text-align: center;
     }
 
-    .metaInfo {
-        display: flex;
-        float: right;
-    }
-
-    .thumbnail {
-        width: fit-content;
-        max-width: 20em;
-        background-color: #333333;
-        color: #18b218;
-        border: #000;
-        padding: 1em;
-        margin: 1em;
-        border-radius: 0.5em;
-    }
-
-    .dataPane {
-        display: flex;
-        float: left;
-        width: 3rem;
-        color: #333;
-    }
-
+/*
     .invisible {
         visibility: hidden;
     }
@@ -86,6 +72,8 @@
         font-size: 4em;
         font-weight: 100;
     }
+
+ */
 
     #logo {
         max-width: 13rem;
