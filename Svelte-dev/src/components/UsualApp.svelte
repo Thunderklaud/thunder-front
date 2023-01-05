@@ -30,16 +30,17 @@
         display: grid;
     }
     .baseMenuSide {
-        width: 25%;
         grid-column: 1;
+        place-self: center;
     }
     .dataPane {
         grid-column: 2;
     }
 
     .metaInfo {
-        width: 25%;
         grid-column: 3;
+          
+        margin-left: 1em;
     }
 
 </style>
