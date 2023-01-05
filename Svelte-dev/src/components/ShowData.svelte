@@ -3,7 +3,7 @@
 
     export let entry;
 
-    function showDataPane() {
+    function showDataPane(event) {
         DataPane.visibility = true;
         if (("dataToShow").className === "invisible") {
             document.getElementById("dataToShow").className = "dataPane";
@@ -16,13 +16,13 @@
 
 <main>
   <div class="navMinor">
-    <button type="button" on:click={showDataPane()}>{entry}</button>
+    <button type="button" on:click={showDataPane}>{entry}</button>
   </div>
 </main>
 
 <style>
     .navMinor {
-        color: #666666;
+        color: #666;
         border: #000;
         border-radius: 0.5em;
     }

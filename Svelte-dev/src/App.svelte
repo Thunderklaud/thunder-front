@@ -1,7 +1,9 @@
 <script>
     import UsualApp from "./components/UsualApp.svelte";
+    import Register from "./routes/register.svelte"
+    import Login from "./routes/login.svelte"
 
-    // export let name;
+    export let name;
 
 </script>
 
@@ -12,7 +14,8 @@
     </div>
   </header>
   <div class="content">
-      <UsualApp/>
+    <!--<UsualApp/>-->
+    <Register/>
   </div>
   <footer>
     <p>put stuff as Components here</p>
@@ -42,6 +45,7 @@
         color: white;
         text-align: center;
     }
+
     .content {
         grid-row: 2;
         height: 51rem;
@@ -61,22 +65,22 @@
         text-align: center;
     }
 
-/*
-    .invisible {
-        visibility: hidden;
-    }
+    /*
+        .invisible {
+            visibility: hidden;
+        }
 
-    h1 {
-        color: #ff3e00;
-        text-transform: uppercase;
-        font-size: 4em;
-        font-weight: 100;
-    }
+        h1 {
+            color: #ff3e00;
+            text-transform: uppercase;
+            font-size: 4em;
+            font-weight: 100;
+        }
 
- */
+     */
 
     #logo {
-        max-width: 13rem;
+        width: 13rem;
     }
 
 

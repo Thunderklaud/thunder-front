@@ -32,19 +32,20 @@
     main {
         float: left;
         margin-left: 1em;
-        display: inline-block;
+        width: 100%;
     }
 
     .even {
-        background-color: #cccccc;
+        background-color: #ccc;
         border-radius: 0.2em;
-        width: 33rem;
     }
 
     .odd {
         background-color: #eee;
         border-radius: 0.2em;
-        width: 33rem;
     }
 
+    /*
+    tr:nth-of-type(2n+1) { background-color: #fff; }
+    */
 </style>
