@@ -1,32 +1,49 @@
 <script>
 
-    //import * as Crypto from "crypto";
+    export const myURL = 'http://localhost:8080/v1/';
 
-
-    export const myURL='http://localhost:8080/v1/';
-    //export const myURL='https://thunderklaud-api.web2ju.de:8080/v1/';
-/*
-    export const hashMe = (message) => {
-        let mybuffer = new Buffer(message, 'utf-8');
-        message = Crypto.webcrypto.subtle.digest('SHA-256', mybuffer);
-        return message;
+    export async function hashMe(p) {
+        const textAsBuffer = new TextEncoder().encode(p);
+        const hashBuffer = await window.crypto.subtle.digest('SHA-256', textAsBuffer);
+        const mystring = hashBuffer.toString();
+        const hashArray = Array.from(new Uint8Array(hashBuffer))
+        const digest = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        return digest;
     }
 
- */
+    export async function myregister(cbody) {
 
-    export async function myfetch(endpoint, cmethod, cbody) {
+        await fetch(myURL + "user/registration", {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(
+                cbody
+            )
+        })
+    }
 
-        await fetch(myURL + endpoint, {
-            method: cmethod,
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Credentials': 'true',
-                'Vary': 'Origin',
-                'Sec-Fetch-Mode': 'no-cors'},
+    export async function mylogin(cbody) {
+
+        await fetch(myURL + "user/login", {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
             credentials: "include",
             body: JSON.stringify(
                 cbody
+            )
+        })
+    }
+
+    export async function mylogout(cbody, email) {
+
+        await fetch(myURL + "user/logout", {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            credentials: "include",
+            body: JSON.stringify(
+                "session_info",
+                JSON.stringify(cbody),
+                email
             )
         })
     }
