@@ -1,7 +1,8 @@
 <script>
     import UsualApp from "./components/UsualApp.svelte";
-    import Register from "./routes/register.svelte"
-    import Login from "./routes/login.svelte"
+    import Register from "./routes/register.svelte";
+    import Login from "./routes/login.svelte";
+    import Footer from "./components/Footer.svelte";
 
     export let name;
 
@@ -18,7 +19,7 @@
     <Register/>
   </div>
   <footer>
-    <p>put stuff as Components here</p>
+    <Footer/>
   </footer>
 
 </main>
@@ -59,11 +60,14 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        height: 3rem;
+        height: 4rem;
         background-color: red;
         color: white;
         text-align: center;
     }
+
+
+
 
     /*
         .invisible {
