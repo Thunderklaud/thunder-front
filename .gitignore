@@ -3,3 +3,9 @@
 
 # cert files
 *.pem
+
+# node-modules
+node_modules
+
+# package-lock.json
+package-lock.json
