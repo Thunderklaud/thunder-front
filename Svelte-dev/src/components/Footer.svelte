@@ -1,4 +1,4 @@
-<!-- Footer-Menu: 
+<!-- Footer-Menu:
      °°°°°°°°°°°° 
         - Soll die Elemente des Footers anzeigen.
         - Gewählte Elemente (Beschreibung, Team, Doku, Impressum)?
@@ -17,36 +17,6 @@
     <br>
         <a href="http://www.google.de">Projektbeschreibung</a>  |  
         <a href="http://www.google.de">Team</a>  |  
-        <a href="http://www.google.de">Dokumentation</a>  | 
+        <a href="https://github.com/Thunderklaud/thunder-server/wiki/API">Dokumentation</a>  |
         <a href="http://www.google.de">Impressum</a>
     <br>
-
-
-<!-- Texte für die entsprechenden Einträge (in progress)
-
-    Projektbeschreibung:
-    °°°°°°°°°°°°°°°°°°°°
-        Die Web-App "ThunderKlaud" wurde als Bachelorprojekt der University of Applied Scinces Fulda im
-        Wintersemester 2022/2023 entwickelt. 
-        ASDF
-
-
-    Team:
-    °°°°°
-        Backend: Timo
-        Frontend: Raffael, Alexander
-        Client: Lorenz, Max
-        ASDF
-
-
-    Dokumentation:
-    °°°°°°°°°°°°°°
-        Link zur Doku???
-
-
-    Impressum:
-    °°°°°°°°°°
-        Lorem Ipsum oder etwas Seriöses?
-
-
--->
