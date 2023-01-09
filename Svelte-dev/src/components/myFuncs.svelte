@@ -3,7 +3,7 @@
     //import * as Crypto from "crypto";
 
 
-    export const myURL='http://localhost:8000/v1/';
+    export const myURL='http://localhost:8080/v1/';
     //export const myURL='https://thunderklaud-api.web2ju.de:8080/v1/';
 /*
     export const hashMe = (message) => {
