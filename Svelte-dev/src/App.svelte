@@ -2,26 +2,41 @@
     import UsualApp from "./components/UsualApp.svelte";
     import Register from "./routes/register.svelte"
     import Login from "./routes/login.svelte"
+    import {Link, Route, Router} from "svelte-navigator"
+    import Home from "./routes/Home.svelte";
 
     export let name;
 
 </script>
 
-<main>
-  <header>
-    <div>
-      <img id="logo" src='assets/Logo-V2.png' alt="XD">
-    </div>
-  </header>
-  <div class="content">
-    <!--<UsualApp/>-->
-    <Register/>
-  </div>
-  <footer>
-    <p>put stuff as Components here</p>
-  </footer>
+<Router>
 
-</main>
+  <main>
+    <header>
+      <Link to="/">Home</Link>
+      <Link to="/routes/login">Login</Link>
+      <Link to="/routes/register">Registrieren</Link>
+
+      <img id="logo" src='/assets/Logo-V2.png' alt="XD">
+
+    </header>
+    <div class="content">
+      <Route path="/" primary="false">
+        <Home/>
+      </Route>
+      <Route path="routes/login">
+        <Login/>
+      </Route>
+      <Route path="routes/register">
+        <Register/>
+      </Route>
+    </div>
+    <footer>
+      <p>put stuff as Components here</p>
+    </footer>
+
+  </main>
+</Router>
 
 <style>
     :global(body) {
