@@ -2,11 +2,14 @@
     import UsualApp from "./components/UsualApp.svelte";
     import Register from "./routes/register.svelte";
     import Login from "./routes/login.svelte";
+    import Home from "./routes/home.svelte";
+    import Projectinfo from "./routes/projectinfo.svelte";
+    import Team from "./routes/team.svelte";
+    import Impressum from "./routes/impressum.svelte";
     import {Link, Route, Router} from "svelte-navigator";
-    import Home from "./routes/Home.svelte";
-    import Footer from "./components/Footer.svelte";
 
-    export let name;
+
+    //export let name;
 
 </script>
 
@@ -21,18 +24,31 @@
 
     </header>
     <div class="content">
-      <Route path="/" primary="false">
+      <Route path="/" primary={false}>
         <Home/>
       </Route>
-      <Route path="routes/login">
+      <Route path="routes/login" primary={false}>
         <Login/>
       </Route>
-      <Route path="routes/register">
+      <Route path="routes/register" primary={false}>
         <Register/>
       </Route>
+      <Route path="routes/projectinfo"primary={false}>
+        <Projectinfo/>
+      </Route>
+      <Route path="routes/impressum" primary={false}>
+        <Impressum/>
+      </Route>
+      <Route path="routes/team" primary={false}>
+        <Team/>
+      </Route>
     </div>
+
     <footer>
-      <Footer/>
+      <Link class="mylink" to="/routes/projectinfo">Projektbeschreibung</Link>
+      <Link class="mylink" to="/routes/team">Team</Link>
+      <Link to="/routes/impressum">Impressum</Link>
+      <a class="mylink" href="https://github.com/Thunderklaud/thunder-server/wiki/API" target="_blank" rel="noreferrer">Dokumentation</a>
     </footer>
 
   </main>
@@ -61,6 +77,10 @@
         text-align: center;
     }
 
+    .mylink:link, .mylink:visited {
+        color: white;
+    }
+
     .content {
         grid-row: 2;
         height: 51rem;
@@ -79,8 +99,6 @@
         color: white;
         text-align: center;
     }
-
-
 
 
     /*
