@@ -1,16 +1,16 @@
 <script>
     import UsualApp from "./components/UsualApp.svelte";
-    import Register from "./routes/register.svelte"
-    import Login from "./routes/login.svelte"
-    import {Link, Route, Router} from "svelte-navigator"
+    import Register from "./routes/register.svelte";
+    import Login from "./routes/login.svelte";
+    import {Link, Route, Router} from "svelte-navigator";
     import Home from "./routes/Home.svelte";
+    import Footer from "./components/Footer.svelte";
 
     export let name;
 
 </script>
 
 <Router>
-
   <main>
     <header>
       <Link to="/">Home</Link>
@@ -32,7 +32,7 @@
       </Route>
     </div>
     <footer>
-      <p>put stuff as Components here</p>
+      <Footer/>
     </footer>
 
   </main>
@@ -74,11 +74,14 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        height: 3rem;
+        height: 4rem;
         background-color: red;
         color: white;
         text-align: center;
     }
+
+
+
 
     /*
         .invisible {
